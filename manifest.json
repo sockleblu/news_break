@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "News Break",
+    "version": "1.0",
+  
+    "description": "Follows news feeds and removes them from view, cleaning up the browsing experience",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["borderify.js"]
+      }
+    ]
+  }
+  
