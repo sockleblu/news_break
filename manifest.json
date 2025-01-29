@@ -3,18 +3,20 @@
     "name": "News Break",
     "version": "1.0",
   
-    "description": "Follows news feeds and removes them from view, cleaning up the browsing experience",
+    "description": "Removes news content from browsing experience.",
   
     "icons": {
       "48": "icons/border-48.png"
     },
-    "background": {
-      "scripts": ["background.js"]
-    },
+  
     "content_scripts": [
       {
-        "matches": ["<all_urls>"],
-        "js": ["test.js"]
+        "matches": ["*://old.reddit.com/*"],
+        "js": ["old_reddit.js"]
+      },
+      {
+        "matches": ["*://www.reddit.com/*"],
+        "js": ["reddit.js"]
       }
     ]
   }
