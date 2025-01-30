@@ -2,13 +2,19 @@
     "manifest_version": 2,
     "name": "News Break",
     "version": "1.0",
-  
+    "homepage_url": "https://github.com/sockleblu/news_break",
     "description": "Removes news content from browsing experience.",
   
     "icons": {
       "48": "icons/border-48.png"
     },
-  
+    "permissions": [
+      "webRequest",
+      "<all_urls>"
+    ],
+    "background": {
+      "scripts": ["rss_feeds.js"]
+    },
     "content_scripts": [
       {
         "matches": ["*://old.reddit.com/*"],
